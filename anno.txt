@@ -1,0 +1,32 @@
+@Column 
+@Lob
+@Transient
+@Validation
+@NotNull||@NotBlank(message="Username is required")
+private String username;
+@Size(min=8,max=16)
+@Min()
+@Max()
+@Pattern(regexp=,message=
+@CreateTimeStamp
+@UpdateTimeStamp
+Controller
+@RestController = combination of @Controller and @Resp
+@RequestMapping("/admin")-/admin/register
+@PostMapping("/register")
+@GetMapping
+@PutMapping
+@DeleteMapping
+@PatchMapping
+@RequestBody
+@PathVariable
+@Autowired
+@RequestParams
+@ResponseStatus
+@Valid
+@PathVariable
+@Autowired
+@	RequestParams
+@ResponseStatus
+@Valid
+@CrossOrigin(origins="http://localhost:3000")
