@@ -30,3 +30,19 @@ Controller
 @ResponseStatus
 @Valid
 @CrossOrigin(origins="http://localhost:3000")
+@Repository
+@Query-JBQL
+@Params
+@NotBlank
+@NotNull
+restcontroller
+requestmapping
+@Table(name=" ")
+@Id
+@GeneratedValue
+@OneToOne
+@OneToMany
+@ManyToOne
+@ManyToMany
+@JoinColumn
+
