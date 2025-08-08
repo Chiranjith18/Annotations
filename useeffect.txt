@@ -1,0 +1,37 @@
+use effect has three dependecy
+
+n React’s useEffect, the dependency array controls when the effect runs. There are three main patterns:
+
+1. No dependency array
+
+useEffect(() => {
+  console.log("Runs after every render");
+});
+Runs: After every render (initial + all updates).
+
+Use case: When you want the effect to run regardless of what changed — like logging or layout measurement.
+
+Caution: Can cause performance issues if the logic is heavy.
+
+2. Empty dependency array []
+
+useEffect(() => {
+  console.log("Runs only once after initial render");
+}, []);
+Runs: Only once, after the component mounts.
+
+Use case: Fetching data on load, setting up subscriptions, initializing values.
+
+Caution: If you use values from outside in this effect, you may need to add them to dependencies to avoid stale data.
+
+3. Specific Dependcy :Dependency array with variables [dep1, dep2, ...]
+
+useEffect(() => {
+  console.log("Runs when count changes:", count);
+}, [count]);
+Runs: On mount and whenever any dependency changes.
+
+Use case: Reacting to specific state or prop changes — like updating data when id changes.
+
+Caution: Dependencies must include everything the effect uses from outside its scope (except constants and refs) to avoid bugs.
+
