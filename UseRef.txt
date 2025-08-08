@@ -1,0 +1,21 @@
+used for auto focus 
+import React, { useEffect, useRef } from "react";
+
+export default function AutoFocusInput() {
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []); // runs only once when component mounts
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" placeholder="I get focus automatically" />
+    </div>
+  );
+}
+useRef(null) → creates a reference to the input element.
+
+useEffect(..., []) → runs only once after mount, calling .focus() on the input.
+
+This way, the user can start typing immediately without clicking the field.
