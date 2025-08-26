@@ -1,0 +1,44 @@
+redux-state management
+data is in store
+useSelector-use to get data
+useDispatch-use to update data
+reducer updates data locally on action and then updates on store
+provider in redux
+
+
+In Redux, the Provider is a special component from the react-redux library. Its job is to make the Redux store available to your entire React app so that any component can access it using hooks like useSelector and useDispatch.
+
+How it works
+
+You create a Redux store with configureStore or createStore.
+
+You wrap your app in a <Provider> component.
+
+You pass the store as a prop to <Provider>.
+
+Now, all components inside can read state or dispatch actions.
+
+Example
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+import App from "./App";
+import counterReducer from "./features/counterSlice";
+
+const store = configureStore({
+  reducer: {
+    counter: counterReducer
+  }
+});
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+Why Provider is needed
+
+Without Provider, your components wouldn’t know about the Redux store. Provider uses React Context under the hood to "inject" the store into your app tree.
