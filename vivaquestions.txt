@@ -1,0 +1,5 @@
+git command,uml,pagination,sorting,filtering,crud,state management
+instead of pagination and filteruing ->ui respsoniveness fron frontedn to backend
+deployment(theory)
+security
+swagger
