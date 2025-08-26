@@ -1,0 +1,14 @@
+ssh ssh command to connect to ec2 in terminal based on ip and pem
+
+
+tar -czvf springfile.tar.gz Springfile/ convert SpringFile to tar and save as springfile.tar.gz
+tar -xzvf springfile.tar.gz
+sudo apt update -y
+sudo apt install docker.io -y
+sudo apt install docker-compose -y
+sudo usermod -aG docker ubuntu
+newgrp docker
+docker-compose up -d --build
+
+
+
