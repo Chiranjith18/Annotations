@@ -1,0 +1,61 @@
+ui->dispatch->action->reducer ->store updation
+for vALIDTION LIE NOTBALCNK we need @valid
+@enablemethod security in springapp for preauth
+preauth->
+secured->role based security alone 
+frontend-netlify,vercel
+backend-render
+railway-mysql
+
+docker-compose yaml
+ 
+service
+mysql first
+     image
+     container_name
+     environment
+     ports
+     volumes
+      - for permanent storage of data
+     network
+ 
+ backend
+ springboot1:
+   build:
+        context:backend dir
+   container name
+   environment
+   ports:
+        -"8081:8080
+   network
+       -my-network
+ 
+  springboot2:
+   build:
+        context:backend dir
+   container name
+   environment
+   ports:
+        -"8082:8080
+   network
+       -my-network
+ nginx - load balancer for 2 backedn
+ 
+ ports
+ ;"8080":80
+ 
+ react
+     image:react_app - a docker file for react
+     containe nane
+     ports
+     network
+ 
+ volumes
+ 
+ networks
+ my-network:
+ driver:brdfe
+     
+     
+ 
+
